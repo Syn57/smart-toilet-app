@@ -1,0 +1,79 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "701c0d2717e55ad533d97633279b8986",
+    "entities": [
+      {
+        "tableName": "feces_warna",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `kehitaman` REAL, `kemerahan` REAL, `normal` REAL, `pucat` REAL, `type` INTEGER, `createdAt` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kehitaman",
+            "columnName": "kehitaman",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "kemerahan",
+            "columnName": "kemerahan",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "normal",
+            "columnName": "normal",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pucat",
+            "columnName": "pucat",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_feces_warna_createdAt",
+            "unique": true,
+            "columnNames": [
+              "createdAt"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_feces_warna_createdAt` ON `${TABLE_NAME}` (`createdAt`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '701c0d2717e55ad533d97633279b8986')"
+    ]
+  }
+}

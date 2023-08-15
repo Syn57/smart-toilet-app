@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.analysis.FecesResultFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pc_result_feces"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="12dp"
+            android:isScrollContainer="false"
+            android:layoutMode="opticalBounds"
+            android:outlineProvider="background"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/tv_feces_color_desc"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_feces_color" />
+
+        <TextView
+            android:id="@+id/tv_percentage_feces_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="50dp"
+            android:text="40%"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/pc_result_feces"
+            app:layout_constraintEnd_toEndOf="@+id/pc_result_feces"
+            app:layout_constraintStart_toStartOf="@+id/pc_result_feces"
+            app:layout_constraintTop_toTopOf="@+id/pc_result_feces" />
+
+
+        <TextView
+            android:id="@+id/tv_feces_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Warna Feses"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_feces_color_desc"
+            app:layout_constraintTop_toTopOf="parent" />
+<!--ukuran font 14 vivo-->
+        <TextView
+            android:id="@+id/tv_feces_color_desc"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/google_sans_light"
+            android:justificationMode="inter_word"
+            android:text="@string/lorem"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_feces_form_desc"
+            app:layout_constraintStart_toStartOf="@+id/tv_feces_form_desc"
+            app:layout_constraintTop_toBottomOf="@id/tv_feces_color" />
+
+        <TextView
+            android:id="@+id/text_test"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="21dp"
+            android:gravity="center"
+            android:text="ini feces result"
+            android:visibility="gone" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_dominant_color"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@color/brown_feces"
+
+            app:layout_constraintBottom_toBottomOf="@+id/tv_feces_color_desc"
+            app:layout_constraintEnd_toEndOf="@+id/iv_feces_form"
+            app:layout_constraintStart_toStartOf="@+id/iv_feces_form"
+            app:layout_constraintTop_toBottomOf="@id/tv_feces_color"
+            app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+
+        <TextView
+            android:id="@+id/tv_dominant_color_feces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Coklat"
+            android:textSize="16sp"
+
+            app:layout_constraintEnd_toEndOf="@id/iv_dominant_color"
+            app:layout_constraintStart_toStartOf="@+id/iv_dominant_color"
+            app:layout_constraintTop_toBottomOf="@+id/iv_dominant_color" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_feces_form"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="-16dp"
+            android:src="@drawable/feces_sample"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_feces_form_desc"
+            app:layout_constraintEnd_toStartOf="@id/tv_feces_form_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_feces_form" />
+
+        <TextView
+            android:id="@+id/tv_feces_form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bentuk Feses"
+            android:textColor="@color/blue"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_feces_form_desc"
+            app:layout_constraintTop_toBottomOf="@+id/tv_feces_color_desc" />
+
+        <TextView
+            android:id="@+id/tv_feces_form_desc"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:justificationMode="inter_word"
+            android:text="@string/lorem"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_feces_form"
+            app:layout_constraintTop_toBottomOf="@id/tv_feces_form" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_feces_form_type"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="-16dp"
+            android:src="@drawable/ic_circle"
+            app:layout_constraintEnd_toStartOf="@id/tv_feces_form_type"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/iv_feces_form"
+            app:layout_constraintTop_toBottomOf="@id/iv_feces_form" />
+
+        <TextView
+            android:id="@+id/tv_feces_form_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Tipe 7"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_feces_form_type"
+            app:layout_constraintEnd_toEndOf="@id/iv_feces_form"
+            app:layout_constraintStart_toEndOf="@id/iv_feces_form_type"
+            app:layout_constraintTop_toTopOf="@id/iv_feces_form_type" />
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum ada data"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

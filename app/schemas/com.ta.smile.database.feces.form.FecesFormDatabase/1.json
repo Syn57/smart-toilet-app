@@ -1,0 +1,97 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "4aa67d329ffef702e415959043a78041",
+    "entities": [
+      {
+        "tableName": "feces_bentuk",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `tipe1` REAL, `tipe2` REAL, `tipe3` REAL, `tipe4` REAL, `tipe5` REAL, `tipe6` REAL, `tipe7` REAL, `type` INTEGER, `createdAt` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tipe1",
+            "columnName": "tipe1",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tipe2",
+            "columnName": "tipe2",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tipe3",
+            "columnName": "tipe3",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tipe4",
+            "columnName": "tipe4",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tipe5",
+            "columnName": "tipe5",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tipe6",
+            "columnName": "tipe6",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tipe7",
+            "columnName": "tipe7",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_feces_bentuk_createdAt",
+            "unique": true,
+            "columnNames": [
+              "createdAt"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_feces_bentuk_createdAt` ON `${TABLE_NAME}` (`createdAt`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4aa67d329ffef702e415959043a78041')"
+    ]
+  }
+}

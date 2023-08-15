@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue_dark">#2A749D</color>
+    <color name="blue">#338DC0</color>
+    <color name="grey">#707070</color>
+    <color name="shimmer">#A8A8A8</color>
+    <!--    feces color-->
+    <color name="brown_feces">#64492A</color>
+    <color name="black_feces">#2C3333</color>
+    <color name="green_feces">#76BA99</color>
+    <color name="white_feces">#F7F7F7</color>
+    <color name="pale_feces">#EFD1AA</color>
+    <color name="yellow_feces">#F2DF3A</color>
+    <color name="red_feces">#E74646</color>
+    <color name="grey_line">#C2C2C2</color>
+    <color name="grey_bg">#F1F1F1</color>
+    <color name="red">#E73526</color>
+    <!--    urine color-->
+    <color name="coklat_urine">#E07800</color>
+    <color name="kuning_g__urine">#D3B100</color>
+    <color name="kuning_sp_urine">#A9A16B</color>
+    <color name="kuning_t_urine">#BEB645</color>
+    <color name="merah_urine">#F70003</color>
+    <color name="orange_urine">#E55500</color>
+    <color name="pink_urine">#C394B0</color>
+    <color name="transparan_urine">#AFAEAC</color>
+    <color name="madu_urine">#E29000</color>
+
+
+</resources>
